@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #080808;
+    --surface: #111111;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A1A1AA;
+    --accent-pink: #F28AB2;
+    --border-color: #292929;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  code, pre, .font-mono, .tech-label {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(242, 138, 178, 0.12) 1px, transparent 1px);
+}
+
+/* Subtle glowing accent utilities */
+.glow-pink-subtle {
+  box-shadow: 0 0 35px -8px rgba(242, 138, 178, 0.2);
+}
+
+.glow-pink-border {
+  border-color: rgba(242, 138, 178, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
